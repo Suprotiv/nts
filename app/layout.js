@@ -1,14 +1,30 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import { Montserrat } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
+
+const montserrat = Montserrat({
   subsets: ["latin"],
+  weight: ["100", "400", "500", "600", "700"], // More flexibility
+  variable: "--font-montserrat",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfair = Playfair_Display({
   subsets: ["latin"],
+  weight: ["400"],
+  style: ["italic"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta",
+  display: "swap",
 });
 
 export const metadata = {
@@ -18,11 +34,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html
+      lang="en"
+      className={`${plusJakarta.className}`}
+    >
+      <body>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
