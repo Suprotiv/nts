@@ -39,10 +39,10 @@ const Service = ({
           >
             <div className="w-full h-full rounded-[10px] overflow-hidden">
               <Image
-                src={`/${backgroundImage}`}
+                src={`${backgroundImage}`}
                 alt={`${title} image`}
                 layout="fill"
-                className="object-cover"
+                className="object-contain"
                 loading="lazy"
               />
             </div>

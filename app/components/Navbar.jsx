@@ -41,7 +41,7 @@ const Navbar = () => {
 
   const menuRef = useRef(null);
   const searchRef = useRef(null);
-  const dropdownRef = useRef(null); // <-- NEW
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const updateNavbarOnScroll = () => {
@@ -76,7 +76,7 @@ const Navbar = () => {
       if (
         !menuRef.current?.contains(event.target) &&
         !searchRef.current?.contains(event.target) &&
-        !dropdownRef.current?.contains(event.target) // <-- Check this too
+        !dropdownRef.current?.contains(event.target)
       ) {
         setMenuOpen(false);
         setDropdownOpen(false);
@@ -125,7 +125,29 @@ const Navbar = () => {
       label: "Policies",
       href: "/policies",
       hasDropdown: true,
-      subItems: ["Code of Conduct", "Privacy Policy", "Terms of Service"],
+      subItems: [
+        {
+          name: "Anti-Bullying and Cyberbullying Policy",
+          path: "/policies/anti-bullying-and-cyberbullying-policy-28-05-2025.pdf",
+        },
+        {
+          name: "Child Protection Policy",
+          path: "/policies/child-protection-policy.pdf",
+        },
+        {
+          name: "Parental Code of Conduct",
+          path: "/policies/parental-code-of-conduct-29-05-2025.pdf",
+        },
+        { name: "Refund Policy", path: "/policies/refund-policy.pdf" },
+        {
+          name: "Social Media Policy",
+          path: "/policies/social-media-policy.pdf",
+        },
+        {
+          name: "Student Disciplinary Policy",
+          path: "/policies/student-disciplinary-policy-28-05-2025.pdf",
+        },
+      ],
     },
     {
       label: "Partners",
@@ -144,6 +166,12 @@ const Navbar = () => {
       href: "/contact",
     },
   ];
+
+  const handlePolicyClick = (path) => {
+    window.open(path, "_blank");
+    setMenuOpen(false);
+    setDropdownOpen(false);
+  };
 
   return (
     <>
@@ -253,19 +281,28 @@ const Navbar = () => {
                           className="absolute md:mt-2 w-full md:w-[230px] z-50 rounded-md shadow-lg bg-[#fefdf8] p-2"
                         >
                           {item.subItems.map((sub) => (
-                            <li key={sub}>
-                              <Link
-                                href={`${item.href}/${sub
-                                  .toLowerCase()
-                                  .replace(/\s+/g, "-")}`}
-                                className="block px-3 py-1 text-sm text-[#111010] hover:bg-[#ededed] rounded transition-all duration-300"
-                                onClick={() => {
-                                  setMenuOpen(false);
-                                  setDropdownOpen(false);
-                                }}
-                              >
-                                {sub}
-                              </Link>
+                            <li key={typeof sub === "string" ? sub : sub.name}>
+                              {typeof sub === "string" ? (
+                                <Link
+                                  href={`${item.href}/${sub
+                                    .toLowerCase()
+                                    .replace(/\s+/g, "-")}`}
+                                  className="block px-3 py-1 text-sm text-[#111010] hover:bg-[#ededed] rounded transition-all duration-300"
+                                  onClick={() => {
+                                    setMenuOpen(false);
+                                    setDropdownOpen(false);
+                                  }}
+                                >
+                                  {sub}
+                                </Link>
+                              ) : (
+                                <button
+                                  onClick={() => handlePolicyClick(sub.path)}
+                                  className="block w-full text-left px-3 py-1 text-sm text-[#111010] hover:bg-[#ededed] rounded transition-all duration-300"
+                                >
+                                  {sub.name}
+                                </button>
+                              )}
                             </li>
                           ))}
                         </motion.ul>

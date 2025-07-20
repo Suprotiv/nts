@@ -16,7 +16,7 @@ const Servicepage = () => {
       description:
         "To take the essence of hands on learning a step further and to engage children into learning and discovery, a 3-D Printing Lab has been set up with the state of the art Ultimaker Pro machine being installed in it, for students of classes III-VIII. The students have two dedicated periods over a week to know and experience the excitement of 3-D Printing.Futurite has provided with an age appropriate curriculum along with the resource persons for the Lab.",
       icon: faLaptopCode,
-      backgroundImage: "/service1.jpg",
+      backgroundImage: "/partners/futurite.jpg",
       orientation: "left", // Image on the left
     },
     {
@@ -24,7 +24,7 @@ const Servicepage = () => {
       description:
         "With the objective of making learning fun and innovative, and to build a strong technology driven generation, we have set up two i-Pad labs, with 42 i-Pads in each for the children of classes LKG-II. The teachers trained on the Ipads plan, create and deliver lessons on the i-Pads which are projected over the Smart Board for children to understand and comprehend better.",
       icon: faMobileAlt,
-      backgroundImage: "/service2.jpg",
+      backgroundImage: "/partners/apple-logo.jpg",
       orientation: "right", // Image on the right
     },
     {
@@ -32,7 +32,7 @@ const Servicepage = () => {
       description:
         "School Cinema is an innovative concept developed by EduMedia and adopted by The Newtown School. Developed through research and taught using short films, thought-provoking workbooks and activities, this learning module for children, teachers and parents, helps them understand and reaffirm values, attitudes, morals and essential life lessons or life skills. The School Cinema Programme enhances learning in a mode that is enjoyable, memorable and educative. The key message in every film is reinforced by age appropriate activities that are designed with the objective to help children use their senses, build healthy relationships and express themselves in a secure space. This is another tool to help in the development of their multiple intelligence capabilities.",
       icon: faCogs,
-      backgroundImage: "/service3.jpg",
+      backgroundImage: "/partners/schoolCinema_200.jpg",
       orientation: "left",
     },
     {
@@ -40,7 +40,7 @@ const Servicepage = () => {
       description:
         "The Maths Club is being run by the Vedic Maths Forum India in order to make Maths fun, interesting and engaging for the students at The Newtown School. Students not only become effortless and quick in their calculations but also develop a solid foundation in Mathematics. Students learn Vedic Maths skills along with solving the Rubik’s cube, Celebrating National Maths Days or a Pi day or simply watching Maths oriented movies and prepare for competitive examinations like Maths Olympiads etc.",
       icon: faServer,
-      backgroundImage: "/service6.jpg",
+      backgroundImage: "/partners/VedicMathsindialogo.jpg",
       orientation: "right",
     },
     {
@@ -48,7 +48,7 @@ const Servicepage = () => {
       description:
         "Future Fit Gymnastics is India’s largest privately owned Gymnastics Coaching Academy for children. Gymnastics – “mother of all sports” is the best way to put children on path to lifelong fitness. Hence, partnering with The New Town School, Future Fit’s qualified and safety-certified team ensures that children are learning in a fun and safe environment, challenging both their mind and their physical fitness.",
       icon: faBullhorn,
-      backgroundImage: "/service5.jpg",
+      backgroundImage: "/partners/fit-future-gymnastics.jpg",
       orientation: "left",
     },
     {
@@ -56,7 +56,7 @@ const Servicepage = () => {
       description:
         "Our unique RFID based smart attendance system for students tracking, bus tracking and automated attendance monitoring for the students has been provided by this Bangalore based company.",
       icon: faSearch,
-      backgroundImage: "/service4.jpg",
+      backgroundImage: "/partners/energywin.jpg",
       orientation: "right",
     },
   ];
